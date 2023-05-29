@@ -1,0 +1,2 @@
+daemon_config:
+  lockfile_path: "/path/to/parse_daemon.lock"
