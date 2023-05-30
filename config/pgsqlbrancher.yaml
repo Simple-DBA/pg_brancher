@@ -8,16 +8,27 @@ pg_sqlbrancher_config:
     log_path: "/test/log"
     log_level: "INFO"  # DEBUG / INFO / WARNING / ERROR / CRITICAL 
     log_refile_period: "month"  # year / month / day
+  connection_pool:
+    min_connections: 10
+    max_connections: 100
+  socket:
+    recive:
+      host: 192.168.150.30
+      port: 6543
+    send:
+      host: 192.168.150.30
+      port: 6543
 
 ## PostgreSQL connection info
 postgres_connectionInfo:
-  userInfo:
-    username: 'experdba'
-    userpassword: 'experdba'
+  user_info:
+    database: "experdb"
+    username: "experdba"
+    userpassword: "experdba"
   server:
-    - serverName : 'node1'
+    - server_name : "node1"
       host: 192.168.150.10
       port: 5432
-    - serverName : 'node2'
+    - server_name : "node2"
       host: 192.168.150.20
       port: 5432
