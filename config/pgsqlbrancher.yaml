@@ -1,0 +1,23 @@
+
+## Genaral config about pg_sqlbrancher
+pg_sqlbrancher_config:
+  daemon:
+    lockfile_path: "/path/to/parse_daemon.lock"
+    socket_lockfile_path: "/path/to/socket.lock"
+  log:
+    log_path: "/test/log"
+    log_level: "INFO"  # DEBUG / INFO / WARNING / ERROR / CRITICAL 
+    log_refile_period: "month"  # year / month / day
+
+## PostgreSQL connection info
+postgres_connectionInfo:
+  userInfo:
+    username: 'experdba'
+    userpassword: 'experdba'
+  server:
+    - serverName : 'node1'
+      host: 192.168.150.10
+      port: 5432
+    - serverName : 'node2'
+      host: 192.168.150.20
+      port: 5432
